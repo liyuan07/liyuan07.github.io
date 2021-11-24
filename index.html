@@ -149,6 +149,234 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/24/%E5%8F%8C%E6%8C%87%E9%92%88-LeeCode680%E9%AA%8C%E8%AF%81%E4%BC%9A%E9%97%AE%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%85%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="LIYUAN">
+      <meta itemprop="description" content="challenger">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LIYUAN'S blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/11/24/%E5%8F%8C%E6%8C%87%E9%92%88-LeeCode680%E9%AA%8C%E8%AF%81%E4%BC%9A%E9%97%AE%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%85%A1/" class="post-title-link" itemprop="url">双指针#LeeCode680验证回文字符串Ⅱ</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-24 12:39:58 / Modified: 12:46:20" itemprop="dateCreated datePublished" datetime="2021-11-24T12:39:58+08:00">2021-11-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="双指针-：-LeeCode680验证回文字符串Ⅱ"><a href="#双指针-：-LeeCode680验证回文字符串Ⅱ" class="headerlink" title="双指针 ： #LeeCode680验证回文字符串Ⅱ"></a>双指针 ： #LeeCode680验证回文字符串Ⅱ</h1><h2 id="题目重述："><a href="#题目重述：" class="headerlink" title="题目重述："></a>题目重述：</h2><p>给定一个非空字符串s，最多删除一个字符，判断是否能够成为回文字符串</p>
+<p>实例1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abca&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 你可以删除c字符。</span><br></pre></td></tr></table></figure>
+
+<p>实例2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abc&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>自己的代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">validPalindrome</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = s.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;<span class="comment">//这里显得多少有带你幼稚了。而且错误出现在这里</span></span><br><span class="line">        <span class="keyword">while</span>(i &lt;= j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count == <span class="number">2</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == s[j])&#123;</span><br><span class="line">                i++;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i+<span class="number">1</span>] == s[j] )&#123;</span><br><span class="line">                count++;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i] == s[j<span class="number">-1</span>])&#123;</span><br><span class="line">                count++;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>思考：不用总是使用count等辅助变量。试试其他的思路！</p>
+<p>关键：只允许失误一次</p>
+<p>题解：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">validPalindrome</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>, j = s.<span class="built_in">length</span>()<span class="number">-1</span> ; i &lt;= j ; i++  ,j--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] != s[j])&#123;<span class="comment">//唯一一次的失误机会</span></span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">isPalindrome</span>(s , i+<span class="number">1</span> , j) || <span class="built_in">isPalindrome</span>(s , i , j<span class="number">-1</span>);<span class="comment">//判断跳过左右两个字符是否会成为回文</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(string s , <span class="keyword">int</span> i , <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i++] != s[j--])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/24/%E5%8F%8C%E6%8C%87%E9%92%88-LeeCode524%E9%80%9A%E8%BF%87%E5%88%A0%E9%99%A4%E5%AD%97%E6%AF%8D%E5%8C%B9%E9%85%8D%E5%88%B0%E5%AD%97%E5%85%B8%E9%87%8C%E6%9C%80%E9%95%BF%E5%8D%95%E8%AF%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="LIYUAN">
+      <meta itemprop="description" content="challenger">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LIYUAN'S blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/11/24/%E5%8F%8C%E6%8C%87%E9%92%88-LeeCode524%E9%80%9A%E8%BF%87%E5%88%A0%E9%99%A4%E5%AD%97%E6%AF%8D%E5%8C%B9%E9%85%8D%E5%88%B0%E5%AD%97%E5%85%B8%E9%87%8C%E6%9C%80%E9%95%BF%E5%8D%95%E8%AF%8D/" class="post-title-link" itemprop="url">双指针#LeeCode524通过删除字母匹配到字典里最长单词</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-24 12:38:44 / Modified: 12:46:12" itemprop="dateCreated datePublished" datetime="2021-11-24T12:38:44+08:00">2021-11-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="双指针：-LeeCode524通过删除字母匹配到字典里最长单词"><a href="#双指针：-LeeCode524通过删除字母匹配到字典里最长单词" class="headerlink" title="双指针：#LeeCode524通过删除字母匹配到字典里最长单词"></a>双指针：#LeeCode524通过删除字母匹配到字典里最长单词</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给你一个字符串 s 和一个字符串数组 dictionary ，找出并返回 dictionary 中最长的字符串，该字符串可以通过删除 s 中的某些字符得到。</p>
+<p>如果答案不止一个，返回长度最长且字母序最小的字符串。如果答案不存在，则返回空字符串。</p>
+<p>示例1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abpcplea&quot;, dictionary = [&quot;ale&quot;,&quot;apple&quot;,&quot;monkey&quot;,&quot;plea&quot;]</span><br><span class="line">输出：&quot;apple&quot;</span><br></pre></td></tr></table></figure>
+
+<p>示例2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abpcplea&quot;, dictionary = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</span><br><span class="line">输出：&quot;a&quot;</span><br></pre></td></tr></table></figure>
+
+<p>自己的代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">findLongestWord</span><span class="params">(string s, vector&lt;string&gt;&amp; dictionary)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = s.<span class="built_in">length</span>();</span><br><span class="line">        vector&lt;string&gt; save;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;dictionary.<span class="built_in">size</span>()<span class="number">-1</span>;i++)&#123;<span class="comment">//1</span></span><br><span class="line">             <span class="keyword">int</span> pointer1 = <span class="number">0</span>;</span><br><span class="line">             <span class="keyword">int</span> pointer2 = <span class="number">0</span>;</span><br><span class="line">             <span class="keyword">while</span>(pointer1 != n)&#123;</span><br><span class="line">                 <span class="keyword">if</span>(s[pointer1++] == dictionary[i][pointer2])&#123;</span><br><span class="line">                     pointer2++;</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line">             <span class="keyword">if</span>(pointer2 == dictionary[i].<span class="built_in">length</span>())&#123;</span><br><span class="line">                save.<span class="built_in">push_back</span>(dictionary[i]);</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(save.<span class="built_in">begin</span>() == save.<span class="built_in">end</span>())&#123;<span class="comment">//3</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">else</span>&#123;</span><br><span class="line">            string temp = save[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;save.<span class="built_in">size</span>();i++)&#123;<span class="comment">//2</span></span><br><span class="line">                <span class="keyword">if</span>(save[i] &lt; save[i<span class="number">-1</span>])&#123;</span><br><span class="line">                    temp = save[i];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> temp;</span><br><span class="line">         &#125;</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>1、2两处使用了两次循环。但是，这是两个完全相统的循环。所以是否可以只使用一次循环就完成？</p>
+<p>3处的判断过于冗余</p>
+<p>题解：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">findLongestWord</span><span class="params">(String s, List&lt;String&gt; dictionary)</span> </span>&#123;</span><br><span class="line">        String res = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span>(String t : dictionary)&#123;</span><br><span class="line">            <span class="keyword">int</span> pointer1 = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> pointer2 = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(pointer1 &lt; s.length() &amp;&amp; pointer2 &lt; t.length())&#123;</span><br><span class="line">                    <span class="keyword">if</span>(s.charAt(pointer1++) == t.charAt(pointer2))&#123;</span><br><span class="line">                    pointer2++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(pointer2 == t.length())&#123;</span><br><span class="line">                <span class="keyword">if</span>(t.length() &gt; res.length() || ( t.length() == res.length() &amp;&amp; t.compareTo(res) &lt; <span class="number">0</span>))&#123;</span><br><span class="line">                    res = t;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/24/%E5%BF%AB%E6%85%A2%E5%8F%8C%E6%8C%87%E9%92%88-LeeCode141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="LIYUAN">
+      <meta itemprop="description" content="challenger">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LIYUAN'S blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/11/24/%E5%BF%AB%E6%85%A2%E5%8F%8C%E6%8C%87%E9%92%88-LeeCode141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">快慢双指针#LeeCode141环形链表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-24 12:32:40 / Modified: 12:46:06" itemprop="dateCreated datePublished" datetime="2021-11-24T12:32:40+08:00">2021-11-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="快慢双指针：-LeeCode141环形链表"><a href="#快慢双指针：-LeeCode141环形链表" class="headerlink" title="快慢双指针：#LeeCode141环形链表"></a>快慢双指针：#LeeCode141环形链表</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给定一个链表，判断链表中是否有环。</p>
+<p>如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。</p>
+<p>如果链表中存在环，则返回 true 。 否则，返回 false 。</p>
+<p>示例1：</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
+
+<p>示例2：</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], pos = 0</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第一个节点。</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="题解：Floyd判圈法"><a href="#题解：Floyd判圈法" class="headerlink" title="题解：Floyd判圈法"></a>题解：Floyd判圈法</h2><p>算法思想：假想「乌龟」和「兔子」在链表上移动，「兔子」跑得快，「乌龟」跑得慢。当「乌龟」和「兔子」从链表上的同一个节点开始移动时，如果该链表中没有环，那么「兔子」将一直处于「乌龟」的前方；如果该链表中有环，那么「兔子」会先于「乌龟」进入环，并且一直在环内移动。等到「乌龟」进入环时，由于「兔子」的速度快，它一定会在某个时刻与乌龟相遇，即套了「乌龟」若干圈。</p>
+<p>我们可以根据上述思路来解决本题。具体地，我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。</p>
+<p>算法实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">NULL</span> || head-&gt;next == <span class="literal">NULL</span>)&#123;<span class="comment">//1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode* slow = head;</span><br><span class="line">        ListNode* fast = head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(slow != fast)&#123;<span class="comment">//判断条件是两个何时相等</span></span><br><span class="line">            <span class="keyword">if</span>(fast == <span class="literal">NULL</span> || fast-&gt;next == <span class="literal">NULL</span>)&#123;<span class="comment">//2</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            slow = slow-&gt;next;<span class="comment">//每次走一格</span></span><br><span class="line">            fast = fast-&gt;next-&gt;next;<span class="comment">//每次走两格</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>1：巧用或运算。先判断前件，如果前件不满足，则直接不考虑后件。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/24/Git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -479,12 +707,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
