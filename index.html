@@ -127,11 +127,6 @@
     <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags<span class="badge">5</span></a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories<span class="badge">0</span></a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives<span class="badge">10</span></a>
@@ -357,10 +352,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-11-26 17:22:07 / Modified: 17:22:40" itemprop="dateCreated datePublished" datetime="2021-11-26T17:22:07+08:00">2021-11-26</time>
+              <time title="Created: 2021-11-26 17:22:07" itemprop="dateCreated datePublished" datetime="2021-11-26T17:22:07+08:00">2021-11-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-11-28 11:00:37" itemprop="dateModified" datetime="2021-11-28T11:00:37+08:00">2021-11-28</time>
+              </span>
 
           
 
@@ -373,7 +374,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="贪心算法：-Leecode121买卖股票的最佳时机"><a href="#贪心算法：-Leecode121买卖股票的最佳时机" class="headerlink" title="贪心算法：#Leecode121买卖股票的最佳时机"></a>贪心算法：#Leecode121买卖股票的最佳时机</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。</p>
+<p>你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。</p>
+<p>返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。</p>
+<p>示例1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：[7,1,5,3,6,4]</span><br><span class="line">输出：5</span><br><span class="line">解释：在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。</span><br><span class="line">     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h2><p>记录前面的最小价格，以当天为卖出价格。计算每天的卖出价格，如果小于最小价格，就更新</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> minprice = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">int</span> maxprofit = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> price : prices)&#123;</span><br><span class="line">    maxprofit = <span class="built_in">max</span>(maxprofit , price - minprice);</span><br><span class="line">    minprice = <span class="built_in">min</span>(minprice , price);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="贪心算法：-Leecode122买卖股票的最佳时机2"><a href="#贪心算法：-Leecode122买卖股票的最佳时机2" class="headerlink" title="贪心算法：#Leecode122买卖股票的最佳时机2"></a>贪心算法：#Leecode122买卖股票的最佳时机2</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个数组 prices ，其中 prices[i] 是一支给定股票第 i 天的价格。</p>
+<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
+<p>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<p>示例1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: prices = [7,1,5,3,6,4]</span><br><span class="line">输出: 7</span><br><span class="line">解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。</span><br><span class="line">     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。</span><br></pre></td></tr></table></figure>
+
+<h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><p>引用评论区第一的大佬的一句话：</p>
+<p>“<code>[7, 1, 5, 6]</code> 第二天买入，第四天卖出，收益最大（6-1），所以一般人可能会想，怎么判断不是第三天就卖出了呢? 这里就把问题复杂化了，根据题目的意思，当天卖出以后，当天还可以买入，所以其实可以第三天卖出，第三天买入，第四天又卖出（（5-1）+ （6-5） === 6 - 1）。所以算法可以直接简化为只要今天比昨天大，就卖出。”</p>
+<h2 id="算法实现-：-双指针"><a href="#算法实现-：-双指针" class="headerlink" title="算法实现 ： 双指针"></a>算法实现 ： 双指针</h2><ol>
+<li>双指针</li>
+<li>从后往前看</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> p1 = prices.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">int</span> p2 = p1 - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> profit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(p2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span>(p2 &gt;= <span class="number">0</span> &amp;&amp; prices[p2] &gt;= prices[p1])&#123;<span class="comment">//这里一定要加强逻辑限定。否则保证越界</span></span><br><span class="line">                p1 = p2--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(p2 &gt;= <span class="number">0</span> &amp;&amp; prices[p2] &lt;= prices[p1])&#123;<span class="comment">//！这里也一定要加强逻辑限定!</span></span><br><span class="line">                profit += prices[p1] - prices[p2];</span><br><span class="line">                p1 = p2--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> profit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -503,7 +531,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-11-28 00:10:53" itemprop="dateModified" datetime="2021-11-28T00:10:53+08:00">2021-11-28</time>
+                <time title="Modified: 2021-11-28 10:26:46" itemprop="dateModified" datetime="2021-11-28T10:26:46+08:00">2021-11-28</time>
               </span>
 
           
@@ -1204,8 +1232,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
