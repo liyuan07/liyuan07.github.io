@@ -20,17 +20,20 @@
     var CONFIG = {"hostname":"liyuan07.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
-  <meta name="description" content="challenger">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LIYUAN&#39;S blog">
-<meta property="og:url" content="https://liyuan07.github.io/tags/Git/index.html">
+  <meta name="description" content="启发自CSDN gogogo_sky的博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="父类指针（或引用）指向父类对象和子类对象时的深刻理解">
+<meta property="og:url" content="https://liyuan07.github.io/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="LIYUAN&#39;S blog">
-<meta property="og:description" content="challenger">
+<meta property="og:description" content="启发自CSDN gogogo_sky的博客">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-30T01:59:37.000Z">
+<meta property="article:modified_time" content="2021-11-30T02:22:39.941Z">
 <meta property="article:author" content="LIYUAN">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://liyuan07.github.io/tags/Git/">
+<link rel="canonical" href="https://liyuan07.github.io/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/">
 
 
 <script id="page-configurations">
@@ -38,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: Git | LIYUAN'S blog</title>
+  <title>父类指针（或引用）指向父类对象和子类对象时的深刻理解 | LIYUAN'S blog</title>
   
 
 
@@ -185,51 +188,155 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Git
-          <small>Tag</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LIYUAN">
+      <meta itemprop="description" content="challenger">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LIYUAN'S blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          父类指针（或引用）指向父类对象和子类对象时的深刻理解
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-30 09:59:37 / Modified: 10:22:39" itemprop="dateCreated datePublished" datetime="2021-11-30T09:59:37+08:00">2021-11-30</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">启发自CSDN gogogo_sky的博客</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-11-24T00:59:01+08:00"
-              content="2021-11-24">
-          11-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/11/24/Git/" itemprop="url">
-            <span itemprop="name">Git</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        <h1 id="赋值兼容规则"><a href="#赋值兼容规则" class="headerlink" title="赋值兼容规则"></a>赋值兼容规则</h1><ul>
+<li>父类的指针指向父类的对象时 : 访问父类的成员</li>
+<li>父类的指针指向子类的对象时 : 访问子类从父类继承下来的那部分数据成员</li>
+</ul>
+<h1 id="函数隐藏"><a href="#函数隐藏" class="headerlink" title="函数隐藏"></a>函数隐藏</h1><p><em>当子类和父类拥有同名的成员变量的时候</em></p>
+<ul>
+<li>父类的指针指向子类对象 : 访问的是继承来的父类中的同名成员变量(成员函数)</li>
+<li>在子类内部或者用子类的对象在子类外访问此同名成员，访问自己累中重新定义的成员</li>
+</ul>
+<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p><em>当子类中重写了父类的虚函数</em></p>
+<ul>
+<li>父类的指针指向父类对象 ： 调用的是父类中的虚函数</li>
+<li>父类的指针指向子类对象 ： 调用的是子类的虚函数<ul>
+<li>当父类的指针指向子类对象时，此时<strong>子类对象中</strong>的<strong>父类的虚函数指针所指向的虚函数表</strong>中虚函数的入口地址<strong>被子类重写</strong>，所以此时用父类的指针指向子类对象时，找到的是子类的同名虚函数地址</li>
+</ul>
+</li>
+<li>同时满足赋值兼容规则（不管父类的指针指向父类对象还是子类对象，父类指针只能访问父类的内容）</li>
+</ul>
+<p>参考文献 ：<a target="_blank" rel="noopener" href="https://blog.csdn.net/gogogo_sky/article/details/73380148?ops_request_misc=&request_id=&biz_id=102&utm_term=%E5%9F%BA%E7%B1%BB%E7%9A%84%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E7%9A%84%E5%BC%95%E7%94%A8&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-73380148.first_rank_v2_pc_rank_v29&spm=1018.2226.3001.4187">CSDN gogogo_sky的博客</a></p>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="LIYUAN WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="LIYUAN Alipay">
+        <p>Alipay</p>
+      </div>
+
   </div>
-  
-  
-  
+</div>
 
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>LIYUAN
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://liyuan07.github.io/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/" title="父类指针（或引用）指向父类对象和子类对象时的深刻理解">https://liyuan07.github.io/2021/11/30/父类指针（或引用）指向父类对象和子类对象时的深刻理解/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+
+      <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+      </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/27/Shell%E7%BC%96%E7%A8%8B/" rel="prev" title="Shell编程">
+      <i class="fa fa-chevron-left"></i> Shell编程
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -282,6 +389,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%85%BC%E5%AE%B9%E8%A7%84%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">赋值兼容规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%9A%90%E8%97%8F"><span class="nav-number">2.</span> <span class="nav-text">函数隐藏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">3.</span> <span class="nav-text">多态</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
