@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/%E6%9D%8E%E6%BA%90/AppData/Roaming/Typora/typora-user-images/image-20211126195750155.png">
 <meta property="article:published_time" content="2021-12-02T03:28:00.000Z">
-<meta property="article:modified_time" content="2021-12-02T03:30:19.380Z">
+<meta property="article:modified_time" content="2021-12-02T04:05:45.390Z">
 <meta property="article:author" content="LIYUAN">
 <meta property="article:tag" content="排序算法">
 <meta name="twitter:card" content="summary">
@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-12-02 11:28:00 / Modified: 11:30:19" itemprop="dateCreated datePublished" datetime="2021-12-02T11:28:00+08:00">2021-12-02</time>
+              <time title="Created: 2021-12-02 11:28:00 / Modified: 12:05:45" itemprop="dateCreated datePublished" datetime="2021-12-02T11:28:00+08:00">2021-12-02</time>
             </span>
 
           
@@ -259,7 +259,7 @@
 <li>记录数组第二个元素的值,遍历n-2次,用该值与其他元素比较,找到最大或者最小的一个交换</li>
 <li>重复上述步骤,遍历N次,直到没有要比较的数</li>
 </ol>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/changhangshi/article/details/82740541?ops_request_misc=&request_id=&biz_id=102&utm_term=%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-82740541.first_rank_v2_pc_rank_v29&spm=1018.2226.3001.4187">参考链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/changhangshi/article/details/82740541">参考链接</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">int</span> N = arr.length;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N-<span class="number">1</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">int</span> minIndex = i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; N; j++) &#123;</span><br><span class="line">        minIndex = arr[j] &gt; arr[minIndex] ? minIndex : j;</span><br><span class="line">    &#125;</span><br><span class="line">    swap(arr , minIndex , i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -272,12 +272,12 @@
 <li><p>继续比较直到排序完成。</p>
 </li>
 </ol>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_53911377/article/details/114410687?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163831758016780261910202%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163831758016780261910202&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-114410687.first_rank_v2_pc_rank_v29&utm_term=%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F&spm=1018.2226.3001.4187">参考链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_53911377/article/details/114410687">参考链接</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">int</span> N = arr.length;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=N-<span class="number">1</span>;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>]) swap(arr,j,j+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>1.从第一个元素开始，该元素可以认为已经被排序<br>2.取下一个元素tem，从已排序的元素序列从后往前扫描<br>3.如果扫描到的元素大于tem，则将该元素移到下一位，并继续向前扫描<br>4.重复步骤3，直到找到已排序元素中小于等于tem的元素<br>5.tem插入到该元素的后面，如果已排序所有元素都大于tem，则将tem插入到下标为0的位置<br>6.重复步骤2<del>5<br>[参考链接](<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50886514/article/details/119045154?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163831562416780271596647%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=163831562416780271596647&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2">https://blog.csdn.net/weixin_50886514/article/details/119045154?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163831562416780271596647%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=163831562416780271596647&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2</a></del>all<del>top_positive</del>default-1-119045154.first_rank_v2_pc_rank_v29&amp;utm_term=%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F&amp;spm=1018.2226.3001.4187)</p>
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>1.从第一个元素开始，该元素可以认为已经被排序<br>2.取下一个元素tem，从已排序的元素序列从后往前扫描<br>3.如果扫描到的元素大于tem，则将该元素移到下一位，并继续向前扫描<br>4.重复步骤3，直到找到已排序元素中小于等于tem的元素<br>5.tem插入到该元素的后面，如果已排序所有元素都大于tem，则将tem插入到下标为0的位置<br>6.重复步骤2~5<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50886514/article/details/119045154">参考链接</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;<span class="comment">//希望0-arr.length变得有序</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = i-<span class="number">1</span>; j&gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; arr[j+<span class="number">1</span>];j--)&#123;</span><br><span class="line">        swap(arr , j , j+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
