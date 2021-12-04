@@ -134,7 +134,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives<span class="badge">16</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -191,6 +191,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/04/%E6%AF%94%E8%BE%83%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LIYUAN">
+      <meta itemprop="description" content="challenger">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LIYUAN'S blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/04/%E6%AF%94%E8%BE%83%E5%99%A8/" class="post-title-link" itemprop="url">比较器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-04 15:01:13 / Modified: 15:01:38" itemprop="dateCreated datePublished" datetime="2021-12-04T15:01:13+08:00">2021-12-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="比较器"><a href="#比较器" class="headerlink" title="比较器"></a>比较器</h1><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ol>
+<li> 比较器的实质就是重载比较运算符</li>
+<li> 比较器可以很好的应用在特殊标准的排序上</li>
+<li> 比较器可以很好的应用在根据特殊标准排序的结构上</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><p>返回负数的时候，第一个参数排在前(上)面</p>
+</li>
+<li><p>返回正数的时候，第二个参数排在后(下)面</p>
+</li>
+<li><p>返回0的时候,谁在其那面无所谓</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> IdAscendingComparator implements Comparator&lt;Student&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Stduent o1 , Student o2)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> o1.age - o2.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个比较器 实现大根堆</span></span><br><span class="line">PriorityQueue&lt;Integer&gt; heap = <span class="keyword">new</span> PriorityQueue&lt;&gt;(<span class="keyword">new</span> AComp)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/02/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,10 +291,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-12-02 11:28:00 / Modified: 12:08:44" itemprop="dateCreated datePublished" datetime="2021-12-02T11:28:00+08:00">2021-12-02</time>
+              <time title="Created: 2021-12-02 11:28:00" itemprop="dateCreated datePublished" datetime="2021-12-02T11:28:00+08:00">2021-12-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-04 15:00:35" itemprop="dateModified" datetime="2021-12-04T15:00:35+08:00">2021-12-04</time>
+              </span>
 
           
 
@@ -854,78 +937,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/25/linux%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/25/linux%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">linux基础</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-11-25 23:14:03" itemprop="dateCreated datePublished" datetime="2021-11-25T23:14:03+08:00">2021-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-11-28 10:26:46" itemprop="dateModified" datetime="2021-11-28T10:26:46+08:00">2021-11-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>(尚硅谷-韩顺平Linux笔记)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/25/linux%E5%9F%BA%E7%A1%80/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -995,7 +1006,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
