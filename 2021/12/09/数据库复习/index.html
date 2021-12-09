@@ -20,30 +20,38 @@
     var CONFIG = {"hostname":"liyuan07.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
-  <meta name="description" content="challenger">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LIYUAN&#39;S blog">
-<meta property="og:url" content="https://liyuan07.github.io/index.html">
+  <meta name="description" content="第1章 概述1.1 DBS概述1.1.1 四个基本概念数据data：描述事物的符号记录。数据库DB：长期存储在计算机内的、有组织的、可共享的大量数据集合。数据库管理系统DBMS：是位于用户与操作系统之间的具有数据定义、数据操纵、数据库的运行管理、数据库的建立和维护功能的一层数据管理软件。数据库系统DBS：在计算机系统中引入数据库后的系统，一般由数据库、数据库管理系统(及其开发工具)、应用系统、数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库复习">
+<meta property="og:url" content="https://liyuan07.github.io/2021/12/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/index.html">
 <meta property="og:site_name" content="LIYUAN&#39;S blog">
-<meta property="og:description" content="challenger">
+<meta property="og:description" content="第1章 概述1.1 DBS概述1.1.1 四个基本概念数据data：描述事物的符号记录。数据库DB：长期存储在计算机内的、有组织的、可共享的大量数据集合。数据库管理系统DBMS：是位于用户与操作系统之间的具有数据定义、数据操纵、数据库的运行管理、数据库的建立和维护功能的一层数据管理软件。数据库系统DBS：在计算机系统中引入数据库后的系统，一般由数据库、数据库管理系统(及其开发工具)、应用系统、数据">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/bwUOBoijedfIhZk.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/MsgqIcGZ8Sa2ACT.png">
+<meta property="og:image" content="c:/Users/%E6%9D%8E%E6%BA%90/AppData/Roaming/Typora/typora-user-images/image-20211204165353319.png">
+<meta property="og:image" content="c:/Users/86158/Desktop/20180806204751503.png">
+<meta property="article:published_time" content="2021-12-09T06:21:54.000Z">
+<meta property="article:modified_time" content="2021-12-09T06:22:28.212Z">
 <meta property="article:author" content="LIYUAN">
+<meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2021/12/04/bwUOBoijedfIhZk.png">
 
-<link rel="canonical" href="https://liyuan07.github.io/">
+<link rel="canonical" href="https://liyuan07.github.io/2021/12/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>LIYUAN'S blog</title>
+  <title>数据库复习 | LIYUAN'S blog</title>
   
 
 
@@ -185,9 +193,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -203,10 +212,9 @@
       <meta itemprop="name" content="LIYUAN'S blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">数据库复习</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          数据库复习
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -220,6 +228,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -230,7 +245,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="第1章-概述"><a href="#第1章-概述" class="headerlink" title="第1章 概述"></a>第1章 概述</h1><h2 id="1-1-DBS概述"><a href="#1-1-DBS概述" class="headerlink" title="1.1 DBS概述"></a>1.1 DBS概述</h2><h3 id="1-1-1-四个基本概念"><a href="#1-1-1-四个基本概念" class="headerlink" title="1.1.1 四个基本概念"></a>1.1.1 四个基本概念</h3><p>数据data：描述事物的<strong>符号记录</strong>。<br>数据库DB：长期存储在计算机内的、有组织的、可共享的大量数据集合。<br>数据库管理系统DBMS：是位于用户与操作系统之间的具有数据定义、数据操纵、数据库的运行管理、数据库的建立和维护功能的一层数据管理软件。<br>数据库系统DBS：在计算机系统中引入数据库后的系统，一般由数据库、数据库管理系统(及其开发工具)、应用系统、数据库管理员<strong>DBA</strong>和用户构成。<br>DDL：数据定义语言(Data Definition Launguage)。<br>DML：数据操纵语言(Data Manipulation Launguage)。  </p>
+        <h1 id="第1章-概述"><a href="#第1章-概述" class="headerlink" title="第1章 概述"></a>第1章 概述</h1><h2 id="1-1-DBS概述"><a href="#1-1-DBS概述" class="headerlink" title="1.1 DBS概述"></a>1.1 DBS概述</h2><h3 id="1-1-1-四个基本概念"><a href="#1-1-1-四个基本概念" class="headerlink" title="1.1.1 四个基本概念"></a>1.1.1 四个基本概念</h3><p>数据data：描述事物的<strong>符号记录</strong>。<br>数据库DB：长期存储在计算机内的、有组织的、可共享的大量数据集合。<br>数据库管理系统DBMS：是位于用户与操作系统之间的具有数据定义、数据操纵、数据库的运行管理、数据库的建立和维护功能的一层数据管理软件。<br>数据库系统DBS：在计算机系统中引入数据库后的系统，一般由数据库、数据库管理系统(及其开发工具)、应用系统、数据库管理员<strong>DBA</strong>和用户构成。<br>DDL：数据定义语言(Data Definition Launguage)。<br>DML：数据操纵语言(Data Manipulation Launguage)。  </p>
 <h3 id="1-1-2-数据管理的三个阶段"><a href="#1-1-2-数据管理的三个阶段" class="headerlink" title="1.1.2 数据管理的三个阶段"></a>1.1.2 数据管理的三个阶段</h3><table>
 <thead>
 <tr>
@@ -1154,695 +1169,83 @@
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/guanghe/p/14788762.html">模式分解</a></li>
 </ol>
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/04/%E6%AF%94%E8%BE%83%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/04/%E6%AF%94%E8%BE%83%E5%99%A8/" class="post-title-link" itemprop="url">比较器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-12-04 15:01:13 / Modified: 15:01:38" itemprop="dateCreated datePublished" datetime="2021-12-04T15:01:13+08:00">2021-12-04</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="LIYUAN WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
       
-          <h1 id="比较器"><a href="#比较器" class="headerlink" title="比较器"></a>比较器</h1><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ol>
-<li> 比较器的实质就是重载比较运算符</li>
-<li> 比较器可以很好的应用在特殊标准的排序上</li>
-<li> 比较器可以很好的应用在根据特殊标准排序的结构上</li>
-</ol>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
-<li><p>返回负数的时候，第一个参数排在前(上)面</p>
-</li>
-<li><p>返回正数的时候，第二个参数排在后(下)面</p>
-</li>
-<li><p>返回0的时候,谁在其那面无所谓</p>
-</li>
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="LIYUAN Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>LIYUAN
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://liyuan07.github.io/2021/12/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/" title="数据库复习">https://liyuan07.github.io/2021/12/09/数据库复习/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> IdAscendingComparator implements Comparator&lt;Student&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Stduent o1 , Student o2)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> o1.age - o2.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
 
 
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个比较器 实现大根堆</span></span><br><span class="line">PriorityQueue&lt;Integer&gt; heap = <span class="keyword">new</span> PriorityQueue&lt;&gt;(<span class="keyword">new</span> AComp)</span><br></pre></td></tr></table></figure>
-
+      <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
 
       
-    </div>
+      </div>
 
-    
-    
-    
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"># 数据库</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/02/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/02/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">排序算法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-12-02 11:28:00" itemprop="dateCreated datePublished" datetime="2021-12-02T11:28:00+08:00">2021-12-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-04 15:00:35" itemprop="dateModified" datetime="2021-12-04T15:00:35+08:00">2021-12-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>左程云B站课程笔记</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/02/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/02/%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B3-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E6%94%B9%E7%BC%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/02/%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B3-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E6%94%B9%E7%BC%96/" class="post-title-link" itemprop="url">分治思想-归并排序改编</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-12-02 11:27:45 / Modified: 11:28:51" itemprop="dateCreated datePublished" datetime="2021-12-02T11:27:45+08:00">2021-12-02</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="分治思想-归并排序改编"><a href="#分治思想-归并排序改编" class="headerlink" title="分治思想 - 归并排序改编"></a>分治思想 - 归并排序改编</h1><h2 id="小和问题"><a href="#小和问题" class="headerlink" title="小和问题"></a>小和问题</h2><p><strong>分治思想，由归并排序改编而来</strong></p>
-<p>在一个数组中，每一个数 左边比当前树小的数累加起来，叫做这个数组的小和。求一个数组的小和。</p>
-<p><em>等价于 ：每一个数右边有多少个数比他大，就产生多少个该数的小和</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>]</span><br><span class="line">对<span class="number">1</span> : 右边有<span class="number">4</span>个数比他大, 产生<span class="number">4</span>个<span class="number">1</span>的小和</span><br><span class="line">对<span class="number">3</span> : 右边有<span class="number">2</span>个数比他大, 产生<span class="number">2</span>个<span class="number">3</span>的小和</span><br><span class="line">对<span class="number">4</span> : 右边有<span class="number">1</span>个数比他大, 产生<span class="number">1</span>个<span class="number">4</span>的小和</span><br><span class="line">…………</span><br><span class="line"><span class="comment">//所以可以使用归并排序轻松的算出一个数右边有多少个数比他大,这样也可以算出小和</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">	1,3,4,2,5 --&gt; 1,3,4</span><br><span class="line">	1,3,4,2,5 --&gt; 2,5 --&gt; 2 &amp; 5</span><br><span class="line">	1,3,4 --&gt; 1,3 --&gt;1 &amp; 3</span><br><span class="line">	1,3,4 --&gt; 4</span><br></pre></td></tr></table></figure>
-
-<p> <em>分批的, 不遗漏不重算的查找所有的小和</em></p>
-<ol>
-<li>对树叶[1](左) [3](右)<strong>merge</strong> ，右边比左边大,记录下1个1的小和并且把左边的指针向右移动一位。此时左边越界，直接把右边拷贝。<ul>
-<li>用O(1)的时间知道右有几个数比左大。通过下标直接计算出右组有几个数比左边当前的数大。</li>
-<li>如果两个数相等，必须要把右边的指针往后移，并且不记录小和。只有左组中的元素绝对比右组中的元素小，才能够通过下表的范式直接计算出右组中有几个数比左组当前数大。</li>
-</ul>
-</li>
-<li>把树叶[1](左) [3](右)的父节点使用排序[1] [3]merge后的数组覆盖。重复。</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> L , <span class="keyword">int</span> M ,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> []help = <span class="keyword">new</span> <span class="keyword">int</span>[R-L+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> p1 = L;</span><br><span class="line">        <span class="keyword">int</span> p2 = M+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(p1&lt;=M &amp;&amp; p2 &lt;= R)&#123;</span><br><span class="line">            sum += arr[p1] &lt; arr[p2] ? (R-p2+<span class="number">1</span>) * arr[p1] : <span class="number">0</span>;</span><br><span class="line">            help[i++] = arr[p1] &lt; arr[p2] ? arr[p1++] : arr[p2++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(p1 &lt;= M)&#123;</span><br><span class="line">            help[i++] = arr[p1++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(p2 &lt;= R)&#123;</span><br><span class="line">            help[i++] = arr[p2++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;help.length;j++)&#123;</span><br><span class="line">            arr[L+j] = help[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">smallsum</span><span class="params">(<span class="keyword">int</span> [ ]arr,<span class="keyword">int</span> L , <span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L == R) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = L + ((R-L) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">        smallsum(arr,L , mid);</span><br><span class="line">        smallsum(arr , mid+<span class="number">1</span> , R);</span><br><span class="line">        merge(arr,L,mid,R);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> []arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length&lt;<span class="number">2</span>) <span class="keyword">return</span>;</span><br><span class="line">        smallsum(arr,<span class="number">0</span>,arr.length-<span class="number">1</span>);</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 
-
-<h2 id="逆序对问题"><a href="#逆序对问题" class="headerlink" title="逆序对问题"></a>逆序对问题</h2><p>在一个数组中,左边的树如果比右边的数大，则这两个数构成一个逆序对，请打印所有的逆序对</p>
-<p><em>小和问题求的是右边有多少个数比左边大，本题求的是右边有多少个数比左边小。</em></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/01/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%BC%82%E6%88%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/01/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%BC%82%E6%88%96/" class="post-title-link" itemprop="url">位运算-异或</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-12-01 20:10:03 / Modified: 20:11:07" itemprop="dateCreated datePublished" datetime="2021-12-01T20:10:03+08:00">2021-12-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="异或满足交换律和结合律"><a href="#异或满足交换律和结合律" class="headerlink" title="异或满足交换律和结合律"></a>异或满足交换律和结合律</h2><p>一个小题目：</p>
-<ol>
-<li>已知某一个数组中，有一个数出现了奇数次，其他的数都出现了偶数次。请问这个数是啥？</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//[1,6,1,2,6,6,2,2,2]</span></span><br><span class="line"><span class="keyword">int</span> eor = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.lenth;i++)&#123;</span><br><span class="line">    eor ^= array[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> eor;<span class="comment">//eor即为结果</span></span><br></pre></td></tr></table></figure>
-
-<p><em>解析 ： 异或满足交换律</em></p>
-<p>eor ^ [1, 6,1,2,6,6,2,2,2] == eor ^ [1,1,2,2,2,2,6,6,6]</p>
-<ol start="2">
-<li>已知某一个数组中，有两个数(a != b)出现了奇数次，其他的数出现了偶数次。请问这两个数是啥</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//[1,6,1,2,6,6,2,2,2]</span></span><br><span class="line"><span class="keyword">int</span> eor = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i : array)&#123;</span><br><span class="line">    eor ^= i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//eor == a ^ b;  eor!=0;(a != b)</span></span><br><span class="line"><span class="keyword">int</span> rightOne = eor &amp; (~eor + <span class="number">1</span>);<span class="comment">//提取eor最右边的那个1</span></span><br><span class="line"><span class="keyword">int</span> eor2 = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i : array)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i &amp; rightOne == <span class="number">0</span>)&#123;<span class="comment">//0或者1都行</span></span><br><span class="line">        eor2 ^= i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(eor + <span class="string">&quot; &quot;</span> + (eor ^ eor2))</span><br></pre></td></tr></table></figure>
-
-<p><em>解析</em></p>
-<p>此时eor至少有一位不等于0；我们假设是第1位 , 那么a的第一位和b的第一位一定是不一样的。</p>
-<p>则另准备一个变量eor2 ， 让他异或上所这个数组中所有第一位不是0的数。此时最终eor2的值为eor2 == a or b;(此时已经找到一个目标了)</p>
-<p>eor ^ eor2 = b or a;(找到第二个目标)</p>
-<h2 id="异或的性质"><a href="#异或的性质" class="headerlink" title="异或的性质"></a>异或的性质</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. a ^ a = 0;</span><br><span class="line">2. a ^ 0 = a;</span><br><span class="line">3. 无进位相加</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//异或实现两两数交换</span></span><br><span class="line"><span class="comment">//前提:两个index不能指向同一个内存空间</span></span><br><span class="line"><span class="comment">//精确到数组,即index1 != index2</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] a ,<span class="keyword">int</span> left ,<span class="keyword">int</span> right)</span></span>&#123;<span class="comment">//前提是left != right 否则会变成0</span></span><br><span class="line">        a[left] = a[left] ^ a[right];</span><br><span class="line">        a[right] = a[left] ^ a[right];</span><br><span class="line">        a[left] = a[left] ^ a[right];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/12/01/%E5%AF%B9%E6%95%B0%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/01/%E5%AF%B9%E6%95%B0%E5%99%A8/" class="post-title-link" itemprop="url">对数器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-12-01 20:09:51 / Modified: 20:10:45" itemprop="dateCreated datePublished" datetime="2021-12-01T20:09:51+08:00">2021-12-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="对数器"><a href="#对数器" class="headerlink" title="对数器"></a>对数器</h1><p>方法a(想测)   随机样本产生器.在结果1和结果2中同时跑2</p>
-<p>方法b</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Math.random() 				//[0,1)所有小数,等概率返回一个</span></span><br><span class="line"><span class="comment">//Math.random() * N  			//[0,N)所有小数,等概率返回一个</span></span><br><span class="line"><span class="comment">//(int)(Math.random() * N)      //[0,N-1]所有的整数,等概率返回一个</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] generateRamdomArray(<span class="keyword">int</span> maxSize , <span class="keyword">int</span> maxValue)&#123;</span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[(<span class="keyword">int</span>)(maxSize+<span class="number">1</span>) * Math.random())];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length.i++)&#123;</span><br><span class="line">         arr[i] = (<span class="keyword">int</span>)((maxValue+<span class="number">1</span>) * Math.random()) - (<span class="keyword">int</span>)(maxValue * Math.random());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxSize = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">int</span> maxValue = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">int</span> testTime = <span class="number">500000</span>;</span><br><span class="line">    <span class="keyword">boolean</span> succeed = <span class="function"><span class="keyword">true</span></span></span><br><span class="line"><span class="function">    <span class="title">for</span><span class="params">(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;testTime;i++)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = generateRandomArray(maxSize , maxValue);</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = copyArray(arr1);</span><br><span class="line">        insertsort(arr1);</span><br><span class="line">        comparator(arr2);</span><br><span class="line">        <span class="keyword">if</span>(isEqual(arr1 , arr2))&#123;</span><br><span class="line">            succeed = <span class="keyword">false</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">父类指针（或引用）指向父类对象和子类对象时的深刻理解(多态、重载、赋值兼容)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-11-30 09:59:37 / Modified: 11:28:14" itemprop="dateCreated datePublished" datetime="2021-11-30T09:59:37+08:00">2021-11-30</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>启发自CSDN gogogo_sky的博客</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/30/%E7%88%B6%E7%B1%BB%E6%8C%87%E9%92%88%EF%BC%88%E6%88%96%E5%BC%95%E7%94%A8%EF%BC%89%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E6%97%B6%E7%9A%84%E6%B7%B1%E5%88%BB%E7%90%86%E8%A7%A3/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/04/%E6%AF%94%E8%BE%83%E5%99%A8/" rel="prev" title="比较器">
+      <i class="fa fa-chevron-left"></i> 比较器
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/27/Shell%E7%BC%96%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/27/Shell%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">Shell编程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-11-27 11:34:54" itemprop="dateCreated datePublished" datetime="2021-11-27T11:34:54+08:00">2021-11-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-11-28 00:07:01" itemprop="dateModified" datetime="2021-11-28T00:07:01+08:00">2021-11-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>(尚硅谷-韩顺平Linux大数据定制篇笔记)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/27/Shell%E7%BC%96%E7%A8%8B/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/26/%E8%B7%AF%E8%BF%87%E4%BA%BA%E9%97%B4%E7%9A%84%E6%83%85%E4%B9%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/26/%E8%B7%AF%E8%BF%87%E4%BA%BA%E9%97%B4%E7%9A%84%E6%83%85%E4%B9%A6/" class="post-title-link" itemprop="url">路过人间的情书</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-11-26 23:53:45 / Modified: 23:54:14" itemprop="dateCreated datePublished" datetime="2021-11-26T23:53:45+08:00">2021-11-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="路过人间的情书"><a href="#路过人间的情书" class="headerlink" title="路过人间的情书"></a>路过人间的情书</h1><p>如果光凭借语言无法表达给你</p>
-<p>那我就为你写上一万封信</p>
-<p>第一写 指尖触碰指尖 是一瞬 如一生的时间</p>
-<p>第二写 耳朵如何听见 兵荒马乱的心上弦</p>
-<p>第三写 眼睛荒无人烟 直到你坠入我的人间</p>
-<p>……</p>
-<p>第四写 银河灿烂无边 是尘埃 也要想你倾斜</p>
-<p>第五写 肺腑滚烫如血 不足以形容的热烈</p>
-<p>第六写 宇宙如果毁灭 生命也 只在刹那终结</p>
-<p>……</p>
-<p>第七写 萤火虫的夏天</p>
-<p>第八写 一朵玫瑰胆怯</p>
-<p>第九写 无规则的光线 落在了你名字上面</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://liyuan07.github.io/2021/11/26/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%EF%BC%9A-Leecode121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LIYUAN">
-      <meta itemprop="description" content="challenger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIYUAN'S blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/26/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%EF%BC%9A-Leecode121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/" class="post-title-link" itemprop="url">贪心算法：#Leecode121买卖股票的最佳时机</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-11-26 17:22:07" itemprop="dateCreated datePublished" datetime="2021-11-26T17:22:07+08:00">2021-11-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-11-28 11:00:37" itemprop="dateModified" datetime="2021-11-28T11:00:37+08:00">2021-11-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="贪心算法：-Leecode121买卖股票的最佳时机"><a href="#贪心算法：-Leecode121买卖股票的最佳时机" class="headerlink" title="贪心算法：#Leecode121买卖股票的最佳时机"></a>贪心算法：#Leecode121买卖股票的最佳时机</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。</p>
-<p>你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。</p>
-<p>返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。</p>
-<p>示例1：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：[7,1,5,3,6,4]</span><br><span class="line">输出：5</span><br><span class="line">解释：在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。</span><br><span class="line">     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h2><p>记录前面的最小价格，以当天为卖出价格。计算每天的卖出价格，如果小于最小价格，就更新</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> minprice = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">int</span> maxprofit = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> price : prices)&#123;</span><br><span class="line">    maxprofit = <span class="built_in">max</span>(maxprofit , price - minprice);</span><br><span class="line">    minprice = <span class="built_in">min</span>(minprice , price);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="贪心算法：-Leecode122买卖股票的最佳时机2"><a href="#贪心算法：-Leecode122买卖股票的最佳时机2" class="headerlink" title="贪心算法：#Leecode122买卖股票的最佳时机2"></a>贪心算法：#Leecode122买卖股票的最佳时机2</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个数组 prices ，其中 prices[i] 是一支给定股票第 i 天的价格。</p>
-<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
-<p>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
-<p>示例1：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: prices = [7,1,5,3,6,4]</span><br><span class="line">输出: 7</span><br><span class="line">解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。</span><br><span class="line">     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。</span><br></pre></td></tr></table></figure>
-
-<h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><p>引用评论区第一的大佬的一句话：</p>
-<p>“<code>[7, 1, 5, 6]</code> 第二天买入，第四天卖出，收益最大（6-1），所以一般人可能会想，怎么判断不是第三天就卖出了呢? 这里就把问题复杂化了，根据题目的意思，当天卖出以后，当天还可以买入，所以其实可以第三天卖出，第三天买入，第四天又卖出（（5-1）+ （6-5） === 6 - 1）。所以算法可以直接简化为只要今天比昨天大，就卖出。”</p>
-<h2 id="算法实现-：-双指针"><a href="#算法实现-：-双指针" class="headerlink" title="算法实现 ： 双指针"></a>算法实现 ： 双指针</h2><ol>
-<li>双指针</li>
-<li>从后往前看</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> p1 = prices.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">int</span> p2 = p1 - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> profit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(p2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span>(p2 &gt;= <span class="number">0</span> &amp;&amp; prices[p2] &gt;= prices[p1])&#123;<span class="comment">//这里一定要加强逻辑限定。否则保证越界</span></span><br><span class="line">                p1 = p2--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(p2 &gt;= <span class="number">0</span> &amp;&amp; prices[p2] &lt;= prices[p1])&#123;<span class="comment">//！这里也一定要加强逻辑限定!</span></span><br><span class="line">                profit += prices[p1] - prices[p2];</span><br><span class="line">                p1 = p2--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> profit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
 
@@ -1894,6 +1297,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">第1章 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-DBS%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 DBS概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E5%9B%9B%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1 四个基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E7%9A%84%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 数据管理的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-DBS%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3 DBS的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 数据模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E4%B8%A4%E7%B1%BB%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 两类数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 概念模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 数据模型的组成要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-4-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.4.</span> <span class="nav-text">1.2.4 常用的数据模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 数据库系统的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-DBS%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 DBS模式的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-DBS%E7%9A%84%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 DBS的三级模式结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-3-DB%E7%9A%84%E4%BA%8C%E7%BA%A7%E6%98%A0%E5%83%8F%E5%8A%9F%E8%83%BD%E5%92%8C%E6%95%B0%E6%8D%AE%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3 DB的二级映像功能和数据独立性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">第2章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8A%E5%BD%A2%E5%BC%8F%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 关系数据结构及形式化定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E5%85%B3%E7%B3%BB"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 关系模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%85%B3%E7%B3%BB%E6%93%8D%E4%BD%9C"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 关系操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%85%B3%E7%B3%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 关系的完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E5%AE%9E%E4%BD%93%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 实体的完整性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 参照完整性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3 用户定义完整性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 关系代数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-%E4%BC%A0%E7%BB%9F%E7%9A%84%E9%9B%86%E5%90%88%E8%BF%90%E7%AE%97"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 传统的集合运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-%E4%B8%93%E9%97%A8%E7%9A%84%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2 专门的关系运算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC3%E7%AB%A0-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86%E8%AF%AD%E8%A8%80SQL"><span class="nav-number">3.</span> <span class="nav-text">第3章 关系型数据库标准语言SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-SQL%E6%A6%82%E8%BF%B0"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 SQL概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-SQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5P78"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.3 SQL的基本概念P78</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89"><span class="nav-number">3.2.</span> <span class="nav-text">3.3 数据定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%A0%E9%99%A4"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.3.1 模式的定义和删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E5%9F%BA%E6%9C%AC%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89%E3%80%81%E5%88%A0%E9%99%A4%E4%B8%8E%E4%BF%AE%E6%94%B9"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.3.2 基本表的定义、删除与修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E7%B4%A2%E5%BC%95%E7%9A%84%E5%BB%BA%E7%AB%8B%E4%B8%8E%E5%88%A0%E9%99%A4"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.3.3 索引的建立与删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.</span> <span class="nav-text">3.4 数据查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.4.1 单表查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-2-%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.4.2 连接查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-3-%E5%B5%8C%E5%A5%97%E6%9F%A5%E8%AF%A2%EF%BC%88nested-query%EF%BC%89%E5%87%B8%E6%98%BE%E7%BB%93%E6%9E%84%E5%8C%96"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.4.3 嵌套查询（nested query）凸显结构化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-4-%E9%9B%86%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.4.</span> <span class="nav-text">3.4.4 集合查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-5-%E5%9F%BA%E4%BA%8E%E6%B4%BE%E7%94%9F%E8%A1%A8%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.5.</span> <span class="nav-text">3.4.5 基于派生表的查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-6-select%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%B8%80%E8%88%AC%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.3.6.</span> <span class="nav-text">3.4.6 select语句的一般格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0"><span class="nav-number">3.4.</span> <span class="nav-text">3.5 数据更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-1-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">3.4.1.</span> <span class="nav-text">3.5.1 插入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-2-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="nav-number">3.4.2.</span> <span class="nav-text">3.5.2 修改数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-3-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">3.4.3.</span> <span class="nav-text">3.5.3 删除数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E7%A9%BA%E5%80%BC%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">3.5.</span> <span class="nav-text">3.6 空值的处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.</span> <span class="nav-text">3.7 视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-1-%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.1.</span> <span class="nav-text">3.7.1 定义视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-2-%E6%9F%A5%E8%AF%A2%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.2.</span> <span class="nav-text">3.7.2 查询视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-3-%E6%9B%B4%E6%96%B0%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.3.</span> <span class="nav-text">3.7.3 更新视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-4-%E8%A7%86%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">3.6.4.</span> <span class="nav-text">3.7.4 视图的作用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">第4章 数据库安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-DB%E5%AE%89%E5%85%A8%E6%80%A7%E6%8E%A7%E5%88%B6"><span class="nav-number">4.1.</span> <span class="nav-text">4.2 DB安全性控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB"><span class="nav-number">4.1.1.</span> <span class="nav-text">4.2.1 用户身份鉴别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6"><span class="nav-number">4.1.2.</span> <span class="nav-text">4.2.2 存取控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-3-%E8%87%AA%E4%B8%BB%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">4.1.3.</span> <span class="nav-text">4.2.3 自主存取控制方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-4-%E6%8E%88%E6%9D%83%EF%BC%9A%E6%8E%88%E4%BA%88%E4%B8%8E%E6%94%B6%E5%9B%9E"><span class="nav-number">4.1.4.</span> <span class="nav-text">4.2.4 授权：授予与收回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-5-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90"><span class="nav-number">4.1.5.</span> <span class="nav-text">4.2.5 创建数据库模式的权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-6-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%92%E8%89%B2"><span class="nav-number">4.1.6.</span> <span class="nav-text">4.2.6 数据库角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">4.1.7.</span> <span class="nav-text">强制存取控制方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E8%A7%86%E5%9B%BE%E6%9C%BA%E5%88%B6"><span class="nav-number">4.2.</span> <span class="nav-text">4.3 视图机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E5%AE%A1%E8%AE%A1"><span class="nav-number">4.3.</span> <span class="nav-text">4.4 审计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC5%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">第5章数据库完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1%E5%AE%9E%E4%BD%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">5.1实体完整性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">5.2.</span> <span class="nav-text">5.2参照完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1参照完整性定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2%E5%8F%82%E7%85%A7%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A3%80%E6%9F%A5%E5%92%8C%E8%BF%9D%E7%BA%A6%E5%A4%84%E7%90%86"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2参照完整性检查和违约处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 用户定义的完整性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-1-%E5%B1%9E%E6%80%A7%E4%B8%8A%E7%9A%84%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6-P163"><span class="nav-number">5.3.1.</span> <span class="nav-text">5.3.1 属性上的约束条件(P163)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-2-%E5%85%83%E7%BB%84%E4%B8%8A%E7%9A%84%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">5.3.2.</span> <span class="nav-text">5.3.2 元组上的约束条件的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F%E5%91%BD%E5%90%8D%E5%AD%97%E5%8F%A5"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 完整性约束命名字句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-%E5%9F%9F%E4%B8%AD%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7%E9%99%90%E5%88%B6"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 域中的完整性限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-%E6%96%AD%E8%A8%80"><span class="nav-number">5.6.</span> <span class="nav-text">5.6 断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="nav-number">5.7.</span> <span class="nav-text">5.7 触发器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA"><span class="nav-number">6.</span> <span class="nav-text">第六章 关系数据库理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E8%A7%84%E8%8C%83%E5%8C%96"><span class="nav-number">6.1.</span> <span class="nav-text">6.2 规范化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-1%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="nav-number">6.1.1.</span> <span class="nav-text">6.2.1函数依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-3%E8%8C%83%E5%BC%8F"><span class="nav-number">6.1.2.</span> <span class="nav-text">6.2.3范式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-4%E5%A4%9A%E5%80%BC%E4%BE%9D%E8%B5%96"><span class="nav-number">6.1.3.</span> <span class="nav-text">6.2.4多值依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E6%95%B0%E6%8D%AE%E4%BE%9D%E8%B5%96%E7%9A%84%E5%85%AC%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">6.2.</span> <span class="nav-text">6.3 数据依赖的公理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-1Armstrong%E5%85%AC%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">6.2.1.</span> <span class="nav-text">6.3.1Armstrong公理系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-2%E9%97%AD%E5%8C%85-%E5%B1%9E%E6%80%A7%E9%97%AD%E5%8C%85%E7%9A%84%E8%AE%A1%E7%AE%97%E7%AE%97%E6%B3%95"><span class="nav-number">6.2.2.</span> <span class="nav-text">6.3.2闭包:属性闭包的计算算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-3%E8%A6%86%E7%9B%96"><span class="nav-number">6.2.3.</span> <span class="nav-text">6.3.3覆盖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%88%86%E8%A7%A3"><span class="nav-number">6.3.</span> <span class="nav-text">6.4模式的分解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC7%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1P205"><span class="nav-number">7.</span> <span class="nav-text">第7章 数据库设计P205</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 数据库设计概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">7.2.</span> <span class="nav-text">#7.1.1 数据库设计的特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-3-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">7.2.1.</span> <span class="nav-text">7.1.3 数据库设计基本步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-%E6%A6%82%E5%BF%B5%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 概念结构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-1%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="nav-number">7.3.1.</span> <span class="nav-text">7.3.1概念模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-2E-R%E6%A8%A1%E5%9E%8B"><span class="nav-number">7.3.2.</span> <span class="nav-text">7.3.2E-R模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-5%E6%A6%82%E5%BF%B5%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E4%BD%93%E4%B8%8E%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%92%E5%88%86%E5%8E%9F%E5%88%99-E-R%E5%9B%BE%E9%9B%86%E6%88%90"><span class="nav-number">7.3.3.</span> <span class="nav-text">7.3.5概念结构设计-实体与属性的划分原则&#x2F;E-R图集成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BD%93%E4%B8%8E%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%92%E5%88%86%E5%8E%9F%E5%88%99"><span class="nav-number">7.3.3.1.</span> <span class="nav-text">实体与属性的划分原则:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-R%E5%9B%BE%E7%9A%84%E9%9B%86%E6%88%90"><span class="nav-number">7.3.3.2.</span> <span class="nav-text">E-R图的集成:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E5%B1%80%E9%83%A8E-R%E5%9B%BE"><span class="nav-number">7.3.3.3.</span> <span class="nav-text">集成局部E-R图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 逻辑结构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-1-E-R%E5%9B%BE%E5%90%91%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">7.4.1.</span> <span class="nav-text">7.4.1 E-R图向关系模型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-2-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">7.4.2.</span> <span class="nav-text">7.4.2 数据模型的优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-DB%E7%9A%84%E7%89%A9%E7%90%86%E8%AE%BE%E8%AE%A1"><span class="nav-number">7.5.</span> <span class="nav-text">7.5 DB的物理设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-2%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E5%AD%98%E5%8F%96%E6%96%B9%E6%B3%95%E9%80%89%E6%8B%A9"><span class="nav-number">7.5.1.</span> <span class="nav-text">7.5.2关系模式存取方法选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DBMS%E5%B8%B8%E7%94%A8%E5%AD%98%E5%8F%96%E6%96%B9%E6%B3%95"><span class="nav-number">7.5.1.1.</span> <span class="nav-text">DBMS常用存取方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-3%E7%A1%AE%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">7.5.2.</span> <span class="nav-text">7.5.3确定数据库的存储结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-6-DB%E7%9A%84%E5%AE%9E%E6%96%BD%E5%92%8C%E7%BB%B4%E6%8A%A4"><span class="nav-number">7.6.</span> <span class="nav-text">7.6 DB的实施和维护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-1-%E6%95%B0%E6%8D%AE%E8%BD%BD%E5%85%A5%E5%92%8C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B0%83%E8%AF%95"><span class="nav-number">7.6.1.</span> <span class="nav-text">7.6.1 数据载入和应用程序的调试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC9%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86%E5%92%8C%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="nav-number">8.</span> <span class="nav-text">第9章 关系查询处理和查询优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-%E5%85%B3%E7%B3%BBDBS%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86"><span class="nav-number">8.1.</span> <span class="nav-text">9.1 关系DBS的查询处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-1%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86%E6%AD%A5%E9%AA%A4"><span class="nav-number">8.1.1.</span> <span class="nav-text">9.1.1查询处理步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%88%86%E6%9E%90"><span class="nav-number">8.1.1.1.</span> <span class="nav-text">1. 查询分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9F%A5%E8%AF%A2%E6%A3%80%E6%9F%A5"><span class="nav-number">8.1.1.2.</span> <span class="nav-text">2. 查询检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="nav-number">8.1.1.3.</span> <span class="nav-text">3. 查询优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9F%A5%E8%AF%A2%E6%89%A7%E8%A1%8C"><span class="nav-number">8.1.1.4.</span> <span class="nav-text">4. 查询执行</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-2%E5%AE%9E%E7%8E%B0%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E7%9A%84%E7%AE%97%E6%B3%95%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.1.2.</span> <span class="nav-text">9.1.2实现查询操作的算法示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-%E5%85%B3%E7%B3%BBDBS%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="nav-number">8.2.</span> <span class="nav-text">9.2 关系DBS的查询优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-1-%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96%E6%A6%82%E8%BF%B0"><span class="nav-number">8.2.1.</span> <span class="nav-text">9.2.1 查询优化概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-%E4%BB%A3%E6%95%B0%E4%BC%98%E5%8C%96"><span class="nav-number">8.3.</span> <span class="nav-text">9.3 代数优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-1-%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AD%89%E4%BB%B7%E5%8F%98%E6%8D%A2%E8%A7%84%E5%88%99"><span class="nav-number">8.3.1.</span> <span class="nav-text">9.3.1 关系代数表达式等价变换规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-2-%E6%9F%A5%E8%AF%A2%E6%A0%91%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E4%BC%98%E5%8C%96-%E9%87%8D%E7%82%B9"><span class="nav-number">8.3.2.</span> <span class="nav-text">9.3.2 查询树的启发式优化(重点)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-%E7%89%A9%E7%90%86%E4%BC%98%E5%8C%96"><span class="nav-number">8.4.</span> <span class="nav-text">9.4 物理优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-1-%E5%9F%BA%E4%BA%8E%E5%90%AF%E5%8F%91%E5%BC%8F%E8%A7%84%E5%88%99%E7%9A%84%E5%AD%98%E5%8F%96%E8%B7%AF%E5%BE%84%E9%80%89%E6%8B%A9%E4%BC%98%E5%8C%96"><span class="nav-number">8.4.1.</span> <span class="nav-text">9.4.1 基于启发式规则的存取路径选择优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC10%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF"><span class="nav-number">9.</span> <span class="nav-text">第10章 数据库恢复技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">9.1.</span> <span class="nav-text">10.1 事务的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%8B%E5%8A%A1"><span class="nav-number">9.1.1.</span> <span class="nav-text">1.事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E7%89%B9%E6%80%A7"><span class="nav-number">9.1.2.</span> <span class="nav-text">2.事务的ACID特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-3-%E6%95%85%E9%9A%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="nav-number">9.2.</span> <span class="nav-text">10.3 故障的种类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%8B%E5%8A%A1%E5%86%85%E9%83%A8%E7%9A%84%E6%95%85%E9%9A%9C"><span class="nav-number">9.2.1.</span> <span class="nav-text">1. 事务内部的故障</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C"><span class="nav-number">9.2.2.</span> <span class="nav-text">2. 系统故障</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BB%8B%E8%B4%A8%E6%95%85%E9%9A%9C"><span class="nav-number">9.2.3.</span> <span class="nav-text">3. 介质故障</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92"><span class="nav-number">9.2.4.</span> <span class="nav-text">4. 计算机病毒</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-4-%E6%81%A2%E5%A4%8D%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%8A%80%E6%9C%AF"><span class="nav-number">9.3.</span> <span class="nav-text">10.4 恢复的实现技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-2-%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.1.</span> <span class="nav-text">10.4.2 日志文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%95%E9%A2%98"><span class="nav-number">10.</span> <span class="nav-text">试题:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
